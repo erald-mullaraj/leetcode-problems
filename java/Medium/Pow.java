@@ -2,15 +2,12 @@ package Medium;
 
 public class Pow {
 
-    public static void main(String[] args) {
-                
-        System.out.println(thePow(2, -2147483648));
-    }
-
+    // simple solution
     public static double thePow(double x, int n ) {
         return Math.pow(x,n);
     }
 
+    // my solution
     public static double myPow(double x, int n) {
         int i = 0; double a=1;
         if (x==0){
