@@ -63,7 +63,7 @@ public class SudokuSolver {
                         }
                     }
                 }
-                System.out.println(Arrays.deepToString(board).toCharArray());   
+                System.out.println(Arrays.deepToString(board));   
             }
         };
         f.findSudoku();
