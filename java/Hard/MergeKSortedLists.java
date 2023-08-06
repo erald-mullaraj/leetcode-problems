@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 class ListNode {
       int val;
       ListNode next;
@@ -13,23 +16,24 @@ class ListNode {
 public class MergeKSortedLists {
 
     public ListNode mergeKLists(ListNode[] lists) {
+
+        ArrayList<Integer> nums = new ArrayList<>();
         ListNode start = new ListNode(0);
         ListNode mrgLs = start;
-        int minIndx = 0;
 
         for (int j = 0; j < lists.length; j++){
             while(lists[j] != null){
-                for (int i = 0; i < lists.length; i++){    
-                    if (lists[i] != null && (lists[i].val <= lists[minIndx].val)){
-                        minIndx = i;      
-                    }
-                }
-                ListNode newNode = new ListNode(lists[minIndx].val);
-                mrgLs.next = newNode;
-                mrgLs = mrgLs.next;
-                lists[minIndx] = lists[minIndx].next;
-                minIndx = 0; 
+                nums.add(lists[j].val);
+                lists[j] = lists[j].next;
             }
+        }
+        Collections.sort(nums);
+        
+
+        for (int j = 0; j < nums.size(); j++){
+            ListNode newNode = new ListNode(nums.get(j));
+            mrgLs.next = newNode;
+            mrgLs = mrgLs.next;
         }
         return start.next;   
     }
