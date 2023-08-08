@@ -29,7 +29,6 @@ public class MergeKSortedLists {
         }
         Collections.sort(nums);
         
-
         for (int j = 0; j < nums.size(); j++){
             ListNode newNode = new ListNode(nums.get(j));
             mrgLs.next = newNode;
