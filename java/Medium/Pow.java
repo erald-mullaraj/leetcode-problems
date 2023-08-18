@@ -1,5 +1,3 @@
-package Medium;
-
 public class Pow {
 
     // simple solution
