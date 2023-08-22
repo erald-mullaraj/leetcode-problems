@@ -6,7 +6,6 @@ public class IsAnagram {
     public static void main(String[] args) {
         String s1 = "abcd";
         String s2 = "cdba";
-        System.out.println('b'-'a');
         System.out.println(isAnagram2(s1, s2));
 
     }
