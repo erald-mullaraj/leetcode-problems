@@ -3,7 +3,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
         String a = "adal;djf;alksdfj";
         System.out.println(lengthOfLongestSubstringa(a));
-        ;
     }
 
     public static int lengthOfLongestSubstringa(String s) {
