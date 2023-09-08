@@ -6,8 +6,6 @@ class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
-
-
 public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
 
