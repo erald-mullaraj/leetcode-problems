@@ -7,6 +7,7 @@ class ListNode {
 }
 
 
+
 public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
 
@@ -24,4 +25,4 @@ public class ReverseLinkedList {
         }
         return curr;
     }
-}
+}  
