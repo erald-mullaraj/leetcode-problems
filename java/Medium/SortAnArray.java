@@ -4,10 +4,13 @@ import java.util.Arrays;
 
 public class SortAnArray {
     public static void main(String[] args) {
+        
         int[] nums = {5, 2, 3, 1, 5, 2, 3, 1};
-        System.out.println(Arrays.toString(sortArray(nums)));
+        Solution2.sortArray(nums);
+        System.out.println(Arrays.toString(nums));
+        System.out.println(Arrays.toString(sortArray1(nums)));
     }
-    public static int[] sortArray(int[] nums) {
+    public static int[] sortArray1(int[] nums) {
         if(nums.length == 1){
             return nums;
         }
@@ -54,18 +57,16 @@ public class SortAnArray {
 }
 
 class Solution2 {
-    public int[] sortArray(int[] nums) {
+    public static int[] sortArray(int[] nums) {
         int[] freq = new int[100001]; 
-        int i = 0;
-        int j = 0;
+        int i = 0, j = 0;
         for(int val : nums) {
             freq[val + 50000]++;
         }      
         while(j<100001){
-            int v = j - 50000;
             int c = 0;
             while(c < freq[j]){
-                nums[i++] = v;
+                nums[i++] = j - 50000;
                 c++;
             }
             j++;
