@@ -55,23 +55,21 @@ public class SortAnArray {
 
 class Solution2 {
     public int[] sortArray(int[] nums) {
-        int[] freq = new int[100001];
-        int[] res = new int[nums.length]; 
+        int[] freq = new int[100001]; 
         int i = 0;
         int j = 0;
         for(int val : nums) {
             freq[val + 50000]++;
         }      
-
         while(j<100001){
             int v = j - 50000;
             int c = 0;
             while(c < freq[j]){
-                res[i++] = v;
+                nums[i++] = v;
                 c++;
             }
             j++;
         }
-        return res;
+        return nums;
     }
 }
