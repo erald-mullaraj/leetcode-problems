@@ -93,5 +93,47 @@ public class ValidSudoku {
             }
         return true;     
     }
+
+    public static boolean isValidSudoku3(char[][] board) {
+        
+        for (int a = 0; a < 9; a += 3){
+            for (int b = 0; b < 9; b += 3){
+                int[] ar = new int[10];
+                for (int x = a; x < a + 3; x++) {
+                    for (int y = b; y < b + 3; y++) {
+                        if (board[x][y] != '.'){
+                            if(ar[board[x][y]-48] == 1){
+                                return false;
+                            } else {
+                                ar[board[x][y]-48] = 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+                
+        for (int i = 0; i < 9; i++) {
+            int[] ar = new int[10];
+            int[] ar2 = new int[10];
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != '.'){
+                    if(ar[board[i][j]-48] == 1){
+                        return false;
+                    } else {
+                        ar[board[i][j]-48] = 1;
+                    }
+                }
+                if (board[j][i] != '.'){
+                    if(ar2[board[j][i]-48] == 1){
+                        return false;
+                    } else {
+                        ar2[board[j][i]-48] = 1;
+                    }
+                }
+            }
+        }
+        return true;   
+    }
 }
 
