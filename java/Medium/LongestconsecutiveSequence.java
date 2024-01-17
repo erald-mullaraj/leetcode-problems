@@ -1,5 +1,6 @@
 package Medium;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class LongestconsecutiveSequence {
@@ -35,4 +36,32 @@ public class LongestconsecutiveSequence {
         }
         return max;
      }
+
+     public static int longestConsecutive2(int[] nums) {
+        if(nums.length==0){
+            return 0;
+        }
+        Arrays.sort(nums);
+        int f = nums[0], count = 0, max = 1;
+        for(int i=1; i<nums.length; i++){
+            System.out.println(max);
+            if(f + 1 == nums[i]){
+                count++;
+            }
+            else if(f == nums[i]){
+                continue;
+            }
+            else {
+                if(count + 1 > max){
+                    max = count + 1;
+                }
+                count = 0;
+            }
+            f = nums[i];
+        }
+        if(count + 1 > max){
+            return count + 1;
+        }
+        return max;
+    }
 }
