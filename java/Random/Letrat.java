@@ -22,14 +22,12 @@ public class Letrat {
         //pjestojm me 10 per ta kthyer ne cm
         return gjatesia/10;
     }
-     
 
     public static void main(String[] args){
 
         System.out.println(gjejGjatesine(50, 0.5, 1));
         System.out.println(gjejGjatesine2(50, 0.5, 1));
         
-
     }
 
 }
