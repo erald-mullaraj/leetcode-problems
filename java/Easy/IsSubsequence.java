@@ -1,8 +1,10 @@
+package Easy;
+
 public class IsSubsequence {
 
     public static void main(String[] args){
         String a = "acc";
-        String b = "ahbcgdbc";
+        String b = "ahbcgdb";
         System.out.println(isSubsequence(a,b));
      
     }
