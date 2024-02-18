@@ -1,5 +1,11 @@
+package Medium;
+
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class GroupAnagrams {
 
@@ -42,5 +48,21 @@ public class GroupAnagrams {
             if(a[i] != 0) return false;
         }
         return true;
+    }
+}
+
+class Solution2 {
+    public static List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> hm = new HashMap<>();
+        for (String s : strs) {
+            char[] c = s.toCharArray();
+            Arrays.sort(c);
+            String st = String.valueOf(c);
+            if (!hm.containsKey(st)) {
+                hm.put(st, new ArrayList<>());
+            }
+            hm.get(st).add(s);
+        }
+        return new ArrayList<>(hm.values());
     }
 }
