@@ -19,7 +19,6 @@ fun saFrutaNgelen (frutat: IntArray) : Int{
             f = 0
             r--;
         } else {
-            f = 0
             r--;
         }
     }
