@@ -6,20 +6,20 @@ fun main (){
 }
 
 fun saFrutaNgelen (frutat: IntArray) : Int{
-    var s = mutableSetOf<Int>()
+    var f = frutat[0]
     var r = 0
     for(i in frutat.indices){
-        if(s.contains(frutat[i])){
+        if(f == frutat[i]){
             r++;
-        } else if (!s.contains(frutat[i]) && r == 0){
-            s.add(frutat[i])
+        } else if (f != frutat[i] && r == 0){
+            f = frutat[i]
             r++;
         }
-        else if (!s.contains(frutat[i]) && r == 1){
-            s.clear()
+        else if (f != frutat[i] && r == 1){
+            f = 0
             r--;
         } else {
-            s.remove(frutat[i])
+            f = 0
             r--;
         }
     }
