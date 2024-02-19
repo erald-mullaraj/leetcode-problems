@@ -9,16 +9,16 @@ fun saFrutaNgelen (frutat: IntArray) : Int{
     var f = frutat[0]
     var r = 0
     for(i in frutat.indices){
-        if(f == frutat[i]){
-            r++;
-        } else if (f != frutat[i] && r == 0){
-            f = frutat[i]
-            r++;
-        }
-        else if (f != frutat[i] && r == 1){
-            f = 0
-            r--;
-        } else {
+        if(f == frutat[i]) r++
+        else if (f != frutat[i]){
+            if(r == 0){
+                f = frutat[i]
+                r++
+            }
+            if(r == 1){
+                f = 0
+                r--
+            }
             r--;
         }
     }
