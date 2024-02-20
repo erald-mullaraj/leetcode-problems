@@ -15,5 +15,5 @@ def saFrutaNgelen(frutat):
     return r
 
 
-fr = [1, 1, 1, 5, 2, 1, 1, 4, 3]
+fr = [1, 2, 1, 2, 1, 2, 1, 2, 1]
 print(saFrutaNgelen(fr))
