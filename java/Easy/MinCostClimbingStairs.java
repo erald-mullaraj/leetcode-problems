@@ -10,7 +10,7 @@ public class MinCostClimbingStairs {
         int f = 0;
         int s = 0;
         for (int i = cost.length - 1; i >= 0; i--) {
-            cost[i] += f <= s ? f : + s;
+            cost[i] += f <= s ? f : s;
             s = f;
             f = cost[i];
         }
