@@ -9,6 +9,15 @@ class Solution:
         for i in range(l//2, 0, -1):
             if not a%i and not b%i:
                 return str1[:i]
+            
+    def gcdOfStrings2(self, str1: str, str2: str) -> str:
+        if str1 + str2 != str2 + str1:
+            return ""
+        a, b = len(str1), len(str2)
+        while a != b:
+            if a > b: a -= b
+            else: b -= a
+        return str1[:a]
         
 s = Solution()
 a = "ABABAB"
