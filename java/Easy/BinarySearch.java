@@ -1,3 +1,5 @@
+package Easy;
+
 public class BinarySearch {
     public static void main(String[] args){
         int[] nums = {-1, 3, 4, 5, 6, 24, 45};

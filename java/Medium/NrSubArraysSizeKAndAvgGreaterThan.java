@@ -1,3 +1,5 @@
+package Medium;
+
 public class NrSubArraysSizeKAndAvgGreaterThan {
 
     public static void main(String[] args) {

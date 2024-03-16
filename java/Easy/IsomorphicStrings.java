@@ -1,3 +1,4 @@
+package Easy;
 
 public class IsomorphicStrings {
     public static void main(String[] args){

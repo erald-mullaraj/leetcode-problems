@@ -1,3 +1,5 @@
+package Easy;
+
 class ListNode {
     int val;
     ListNode next;

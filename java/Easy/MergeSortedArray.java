@@ -1,3 +1,5 @@
+package Easy;
+
 import java.util.Arrays;
 
 public class MergeSortedArray {
@@ -6,12 +8,12 @@ public class MergeSortedArray {
         int nums1[] = new int[]{1,2,3,0};
         int nums2[] = new int[]{1};
         int m = 3; int n = 1;
+        merge(nums1, m, nums2, n);
     }
 
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int l=m+n-1;
         for (int j = l;j>=0;j--){
-            System.out.println(j + " " + m + "   " + n);
             if (n==0){
                 break;   
             }
@@ -27,6 +29,7 @@ public class MergeSortedArray {
                 n--;
             }
         }
+        System.out.println(Arrays.toString(nums1));
     }
     
 }

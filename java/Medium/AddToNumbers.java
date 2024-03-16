@@ -1,3 +1,5 @@
+package Medium;
+
 class ListNode{
     int val;
     ListNode next;

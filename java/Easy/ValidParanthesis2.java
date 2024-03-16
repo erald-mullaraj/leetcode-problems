@@ -1,4 +1,6 @@
-    class ValidPalindrome2 {
+package Easy;
+
+class ValidPalindrome2 {
 
     public static void main(String[] args){
             String s = "eccer";

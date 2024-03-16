@@ -1,3 +1,5 @@
+package Easy;
+
 public class IndexOfFirstOccurrenceInString {
     
     public static void main(String[] args) {
