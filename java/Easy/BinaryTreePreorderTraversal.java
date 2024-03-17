@@ -20,7 +20,7 @@ import java.util.List;
  */
 
 public class BinaryTreePreorderTraversal {
-    public List<Integer> preorderTraversal(Treenode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> a = new ArrayList<>();
         recurision(root, a);
         return a;
@@ -35,3 +35,15 @@ public class BinaryTreePreorderTraversal {
         recurision(root.right, lst);
     }
 }
+class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }

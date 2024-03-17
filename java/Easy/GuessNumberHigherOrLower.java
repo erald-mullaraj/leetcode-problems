@@ -26,5 +26,9 @@ public class GuessNumberHigherOrLower {
                 return m;
         }
     }
+
+    public int guess(int m){
+        return (int) Math.random()*100;
+    }
     
 }
