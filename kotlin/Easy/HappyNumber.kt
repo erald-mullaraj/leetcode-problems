@@ -17,3 +17,8 @@ class HappyNumber {
         return false
     }
 }
+
+fun main () {
+    var a = HappyNumber().isHappy(7)
+    println(a)
+}
