@@ -9,7 +9,7 @@ public class LastStoneWeight {
         System.out.println(lastStoneWeight(stones));
     }
     public static int lastStoneWeight(int[] stones) {
-        PriorityQueue<Integer> mH = new PriorityQueue();
+        PriorityQueue<Integer> mH = new PriorityQueue<>();
         for (int st : stones){
             mH.add(-st);
         } 
