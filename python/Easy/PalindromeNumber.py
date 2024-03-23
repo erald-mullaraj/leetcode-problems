@@ -5,6 +5,11 @@ class Solution:
             return True
         else:
             return False
+        
+class Solution2:
+    def isPalindrome(self, x):
+        x=str(x)
+        return x == x[::-1]
 
 s = Solution()
 print(s.isPalindrome(12321))
