@@ -44,9 +44,8 @@ public class ReorderList {
 
     public ListNode recursive(ListNode f, ListNode s){
         ListNode n = s.next;
-        if(f == null){
-            return s;
-        }else if(f.next == null){
+        if(f == null)return s;
+        if(f.next == null){
             s.next = null;
             return n;
         }
@@ -56,7 +55,5 @@ public class ReorderList {
         if(s.next == r) r.next = null;
         s.next = r;
         return n;
-    }
-
-    
+    }  
 }
