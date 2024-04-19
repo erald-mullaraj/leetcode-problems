@@ -26,7 +26,6 @@ public int pairSum(ListNode head){
     while( head != null){
         if(idx < (l)/2){
             a[i] += head.val;
-            max = max > a[i] ? max : a[i];
             i++;
         } else {
             i--;
