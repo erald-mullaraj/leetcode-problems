@@ -1,6 +1,7 @@
 package Easy;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Shift2dGrid {
@@ -24,13 +25,15 @@ public class Shift2dGrid {
                 g[nidx/n][nidx%n] = grid[i][j];
             }
         }
-        for(int i = 0; i < m; i++){
-            List<Integer> l1 = new ArrayList<>();
-            for(int j = 0; j < n; j++){
-                l1.add(g[i][j]);
-            }
-            l.add(l1);
-        }
-        return l;
+        return (List)Arrays.asList(g); 
+        
+        // for(int i = 0; i < m; i++){
+        //     List<Integer> l1 = new ArrayList<>();
+        //     for(int j = 0; j < n; j++){
+        //         l1.add(g[i][j]);
+        //     }
+        //     l.add(l1);
+        // }
+        // return l;
     }
 }
