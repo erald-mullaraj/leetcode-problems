@@ -8,7 +8,12 @@ public class RedistCharToMakeStringsEqual {
     }
 
     public static boolean makeEqual(String[] words){
+        int s = 0;
         int[] a = new int[26];
+        for(int i=0; i<words.length; i++){
+            s += words[i].length();
+        }
+        if(s % words.length != 0) return false;
         for(int i = 0; i < words.length; i++){
             for(int j = 0; j < words[i].length(); j++){
                 a[words[i].charAt(j) - 'a']++;
